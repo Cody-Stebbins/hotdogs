@@ -9,7 +9,7 @@ app.use(morgan('default'));
 //app.use(require('./middleware/health')());
 
 // Everything else to index
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'));
 });
 
